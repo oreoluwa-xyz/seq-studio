@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="Explore SEQ’s interactive keyboard map and searchable field guide. Learn controls without connecting hardware.">
+<title>The manual — SEQ</title>
+<link rel="stylesheet" href="../ui/style.css">
+<link rel="stylesheet" href="manual.css">
+<script type="module" src="manual.mjs"></script>
+</head>
+<body>
+<header class="guide-header"><a class="guide-brand" href="../">SEQ <span>/ FIELD GUIDE</span></a><a href="../ui/">Open Studio</a></header>
+<main class="guide-page">
+<div class="guide-intro"><div class="eyebrow">LEARN THE INSTRUMENT</div><h1>The manual.</h1><p>Explore the keys. Find a gesture. Keep your idea moving.</p></div>
+<nav class="guide-tabs" aria-label="Manual views"><a href="#keyboard" id="map-tab">Keyboard map</a><a href="#guide" id="guide-tab">Written guide</a><button id="copy-link" type="button">Copy link</button><span id="copy-status" role="status"></span></nav>
+<section id="map-view" aria-labelledby="map-tab"><p class="reference-note"><strong>Explore controls.</strong> Choose a mode, then select a key for its gestures. No keyboard connection needed.</p>
+<section id="keyboard-guide" aria-label="Interactive keyboard controls">
+<div class="keyboard-toolbar"><span class="keyboard-model">KEYCHRON <strong>V1 MAX</strong><small>ANSI / 75% / ENCODER</small></span><label>Key layout<select id="keyboard-os"><option value="mac">Mac</option><option value="win">Windows</option></select></label></div>
+<div class="keyboard-live-toolbar"><label><input id="keyboard-live" type="checkbox" checked> Follow keyboard</label><span id="keyboard-live-status" role="status">Connect to see live state</span><span id="keyboard-live-position"></span></div>
+<div class="keyboard-modes" role="group" aria-label="Sequencer mode"></div>
+<div class="keyboard-mode-intro"><div><h3 class="keyboard-mode-title"></h3><p class="keyboard-mode-help"></p></div><label class="keyboard-grid-option"><input type="checkbox" id="keyboard-grid"> 4 × 4 drum grid</label></div>
+<p class="keyboard-scroll-hint">Swipe across the keyboard to explore →</p>
+<div class="keyboard-scroll" tabindex="0" aria-label="V1 Max keyboard map; scroll horizontally on smaller screens"><div class="keyboard-chassis"><div class="keyboard-keys" role="group" aria-label="Keyboard keys; use arrow keys to explore"></div><div class="keyboard-engraving"><span>V1 MAX / SEQ</span><span>CONTROL ATLAS — 01</span></div></div></div>
+<div class="keyboard-legend" aria-label="Control colors"><span data-group="track">Tracks</span><span data-group="step">Steps</span><span data-group="note">Notes / chords</span><span data-group="parameter">Parameters</span><span data-group="modifier">Modifiers</span><span data-group="transport">Transport</span></div>
+<div class="keyboard-live-legend"><span>LED strips / firmware colors</span><span>Orange / playhead or sounding</span><span>Light / stored step</span><span>Violet / selected notes</span></div>
+<div class="keyboard-detail" aria-live="polite"></div><p class="keyboard-caption">Select a key to explore its gesture. Follow keyboard mirrors its mode and LED colors when supported. Turn it off to explore reference controls. Clicking keys only shows help. F1–F12 identify physical positions, including the Mac media row.</p>
+</section>
+<p class="studio-note">For help that follows your connected keyboard or selected draft, <a href="../ui/">open the manual in Studio</a>. This reference page does not send MIDI or change your instrument.</p>
+</section>
+<section id="written-view" aria-labelledby="guide-tab" hidden>
+<div class="guide-search"><label for="guide-search">Find a control or workflow</label><input id="guide-search" type="search" placeholder="Try recording, chord, or Space…" autocomplete="off"><span id="guide-count" role="status"></span></div>
+<div class="reading-layout"><nav id="guide-sections" aria-label="Written guide sections"></nav><article id="guide-content" tabindex="-1"><p>Loading the written guide…</p></article></div>
+</section>
+<noscript><p>The interactive keyboard and search need JavaScript. <a href="../MANUAL.md">Read the source manual</a>.</p></noscript>
+</main>
+<footer class="guide-footer"><span>One instrument. One field guide.</span><a href="../MANUAL.md">Markdown source</a><a href="../">Back to SEQ</a></footer>
+</body>
+</html>
